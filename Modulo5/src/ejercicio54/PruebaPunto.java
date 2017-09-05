@@ -1,41 +1,33 @@
 package ejercicio54;
 
-import java.util.Scanner;
-
 public class PruebaPunto {
 
-	public static void main(String[] args) {
-		
-		Scanner teclado = new Scanner(System.in);
+	public static void main(String[] args) {		
 		
 		Punto [] losPuntos = new Punto [10];
 		losPuntos [0] = new Punto (1,5);
-		losPuntos [1] = new Punto (1,5);
+		losPuntos [1] = new Punto (2,6);
 		
 		String option = Punto.pintarMenu();
 		
-		System.out.println("tu opcion es " + option);
+		System.out.println("tu opcion es " + option.toUpperCase());
 
 		switch (option.toUpperCase()) {
 		
 		case "C":
-			System.out.println("estas en el caso C");
 			Punto.crearPunto(losPuntos, Punto.counter);
-			System.out.println("El contador es " + Punto.counter);
+			System.out.println("El contador ahora es " + Punto.counter);
 			break;
 			
 		case "B":
-			System.out.println("estas en el caso B");
 			Punto.buscarPunto(losPuntos, Punto.counter);
 			break;
 			
 		case "D":			
-			System.out.println("estas en el caso D");
-			//Punto.borrarPunto(losPuntos, Punto.counter);
+			Punto.borrarPunto(losPuntos, Punto.counter);
 			break;
 			
 		case "L":
-			System.out.println("estas en el caso L");
 			Punto.listarPunto(losPuntos, Punto.counter);
 			break;
 			
@@ -44,7 +36,6 @@ public class PruebaPunto {
 			break;
 
 		default:
-			System.out.println("estas en el caso default");
 			Punto.pintarMenu();
 			break;
 		}

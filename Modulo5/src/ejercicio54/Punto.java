@@ -61,17 +61,14 @@ public class Punto {
 
 		System.out.println("Introduce la segunda coordenada");
 		int segundaCoordBusqueda = teclado.nextInt();
+		
+		teclado.close();
 
 		Punto puntoBuscado = new Punto(primeraCoordBusqueda, segundaCoordBusqueda);
 
 		boolean puntoEncontrado = false;
 
 		for (int i = 0; i < counter; i++) {
-
-			// Para evitar un null pointer exception de comparar un punto null
-			// con
-			// el punto creado hay que verificar que no hay null
-
 			if (losPuntos[i] != null) {
 				if (losPuntos[i].equals(puntoBuscado)) {
 					puntoEncontrado = true;
@@ -79,40 +76,42 @@ public class Punto {
 				}
 			}
 		}
-
-		if (!puntoEncontrado) {
-			System.out.println("El punto buscado no existe");
-		}
+		
+		if (!puntoEncontrado){System.out.println("El punto buscado no existe");}
 	}
 
 	static boolean borrarPunto(Punto[] losPuntos, int counter) {
-
-		/*
-		 * Cuando se borra un elemento se borra el último Punto creado. Si se
-		 * intenta crear un Punto y ya está lleno el array, se visualiza un
-		 * mensaje con eta información. Si se intenta borrar un Punto y no
-		 * existe ningún Punto, se visualiza un mensaje con esta información.
-		 */
-
-		// return true: se puede crear punto
-		// return false: no se puede crear punto
-
-		return true;
+		boolean sePuedeBorrar;
+		
+		if ((counter-1)>0 && losPuntos[counter-1] != null) {
+			losPuntos[counter-1]=null;
+			counter--;				
+			System.out.println("El punto ha sido borrado. Nuevo contado: "+ counter);
+			sePuedeBorrar = true;
+		}
+		else {
+			System.out.println("No hay puntos para borrar");
+			sePuedeBorrar= false;
+		}
+		
+		return sePuedeBorrar;
 	}
 
 	static void listarPunto(Punto[] losPuntos, int counter) {
 
-		for (int i = 0; i <= 9; i++) {
-			System.out.println("El punto en la posición " + i + " es " + losPuntos[i]);
+		for (int i = 0; i <= 9; i++) {			
+			System.out.println("El punto en la posición " + i + " es " + losPuntos[i]);			
 		}
 	}
-
+	
 	public boolean equals(Punto puntoAComparar) {
-
 		if (puntoAComparar.x == this.x && puntoAComparar.y == this.y) {
 			return true;
 		} else {
 			return false;
 		}
 	}
+	
+	@Override
+	public String toString() {return "("+x + ","+ y+")" ;}		
 }
