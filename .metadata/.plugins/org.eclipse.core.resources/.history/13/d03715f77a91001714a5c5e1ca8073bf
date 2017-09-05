@@ -1,0 +1,35 @@
+package cine;
+
+import java.util.Arrays;
+
+public class Sala {
+	
+	private int [] fila = {8,7,6,5,4,3,2,1};
+	private String[] letra = {"A","B","C","D","E","F","G","H","I"};	
+	private String sala[][]= new String[8][9];
+	
+	public Sala(){
+		this.sala = butacaDisponible();
+	}
+	
+	public  String[][] butacaDisponible(){
+		for (int i = 0; i < sala.length; i++) {
+			for (int j = 0; j <= sala.length; j++) {
+				sala [i][j]= "libre";
+			}
+		}
+		return sala;
+	}
+
+	@Override
+	public String toString() {
+		String butacas[][]= new String[8][9];
+		for (int i = 0; i <= butacas.length; i++) {
+			for (int j = 0; j < butacas.length; j++) {
+				butacas [i][j]=fila[i] + letra [i];
+			}			
+		}
+		
+		return "Sala "+Arrays.toString(butacas[0]);
+	}
+}

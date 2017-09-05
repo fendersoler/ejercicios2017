@@ -1,0 +1,57 @@
+package universidad;
+
+import java.util.Arrays;
+import java.util.concurrent.ThreadLocalRandom;
+
+public class Alumno extends Persona {
+	
+	private String [][] asignaturasYNotas = new String [3][2];	
+	private boolean estaDisponible;	
+	private String [] asignaturasDisponibles = {super.asignaturas(0),super.asignaturas(1),super.asignaturas(2)};
+	private String [] notasGlobales = {"0","0","0"};
+	
+	public Alumno(){}
+
+	public Alumno(String nombre, int edad, String sexo) {
+		super(nombre, edad, sexo);
+		this.estaDisponible = disponible();	
+		this.asignaturasYNotas = mostrarNotasDelAlumno(asignaturasDisponibles, notasGlobales);			
+	}
+
+	public boolean disponible(){
+		//Los estudiantes tendrán un 50% de hacer novillos
+		int indiceDeBaja = ThreadLocalRandom.current().nextInt(0, 100);
+		boolean estaDisponible = super.disponible();	
+		if (indiceDeBaja <=50){estaDisponible = false;}
+		return estaDisponible;}
+	
+	private String[][] mostrarNotasDelAlumno (String[] asignaturasDisponibles, String[] notasGlobales) {	
+		for (int i = 0; i < 3; i++) {
+			asignaturasYNotas[i][0]= asignaturasDisponibles[i]; 
+			asignaturasYNotas[i][1]= notasGlobales[i];
+			}		
+		return asignaturasYNotas;
+	}
+	
+	protected void asignarNota (String asignatura, Integer nota){
+		int i =0;
+		do {
+			if (asignatura == super.asignaturas(i)){
+				notasGlobales[i]=nota.toString();
+				i=asignaturasDisponibles.length;
+				this.asignaturasYNotas = mostrarNotasDelAlumno(asignaturasDisponibles, notasGlobales);
+			}
+			else {i++;}
+		} while (i<asignaturasDisponibles.length);		
+	}
+	
+	public boolean isEstaDisponible(){return estaDisponible;}
+	public String[] getNotasGlobales(){return notasGlobales;}
+
+	@Override
+	public String toString() {
+		return "Alumno [nombre=" + nombre + ", edad=" + edad+ ", sexo=" + sexo + 
+				", estaDisponible= " + estaDisponible + ", notas" +Arrays.toString(asignaturasYNotas[0])+
+				Arrays.toString(asignaturasYNotas[1])+Arrays.toString(asignaturasYNotas[2]) + " ]";
+	}
+}

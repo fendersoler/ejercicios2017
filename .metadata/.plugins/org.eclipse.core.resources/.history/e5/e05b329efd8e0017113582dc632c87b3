@@ -1,0 +1,7 @@
+package cine;
+
+public class Pelicula {
+	
+	//nos interesa saber el título, duración, edad mínima y director.
+
+}

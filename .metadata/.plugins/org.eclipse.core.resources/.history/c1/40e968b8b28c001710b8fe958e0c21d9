@@ -1,0 +1,63 @@
+package universidad;
+
+import java.util.concurrent.ThreadLocalRandom;
+
+public class Aula {	
+	
+	private int idAula;
+	private int numeroMaxDeEstudiates;
+	private String asignaturaDelAula;
+	
+	public Aula(){
+		this.idAula = ThreadLocalRandom.current().nextInt(0, 80);
+		this.numeroMaxDeEstudiates= ThreadLocalRandom.current().nextInt(30, 120);
+		this.asignaturaDelAula = asignaturaDelAula ();
+	}
+	
+	private String asignaturaDelAula () {			
+		String [] asignaturasDisponibles = {"Matemáticas","Filosofia","Física"};
+		int indiceDeMaterias = ThreadLocalRandom.current().nextInt(0, 3);		
+		String asignaturaDelAula= asignaturasDisponibles[indiceDeMaterias];
+		return asignaturaDelAula;
+	}
+	
+	Profesor profe1 = new Profesor("Pepe", 50, "hombre");
+	Profesor profe2 = new Profesor("Paco", 48, "hombre");
+	Profesor profe3 = new Profesor("Maria", 38, "mujer");
+	Profesor profe4 = new Profesor("Teresa", 45, "mujer");
+	Profesor profe5 = new Profesor("Alfonso", 64, "hombre");
+	Alumno alumno1 = new Alumno("Juan", 19, "hombre");
+	Alumno alumno2 = new Alumno("Pilar", 23, "mujer");
+	Alumno alumno3 = new Alumno("Laura", 18, "mujer");
+	Alumno alumno4 = new Alumno("David", 20, "hombre");
+	Alumno alumno5 = new Alumno("Diana", 21, "mujer");
+	Alumno alumno6 = new Alumno("Carlos", 22, "hombre");
+
+	public boolean sePuedeDarClase(){
+		Profesor profe = new Profesor();
+		Alumno alumno = new Alumno();
+		
+		boolean aulaYProfe;		
+		if (asignaturaDelAula==profe.getMateria() && profe.isEstaDisponible()==true){aulaYProfe = true;
+			System.out.println("Se puede dar clase con el profesor");}
+		else{aulaYProfe = false;}
+		
+		boolean aulaYAlumnos;
+		if (alumno.disponible() ==true && numeroMaxDeEstudiates>=(numeroMaxDeEstudiates/2)) {aulaYAlumnos = true;
+			System.out.println("Se puede dar clase con los alumnos");} 
+		else {aulaYAlumnos = false;}
+		
+		if (aulaYProfe == true && aulaYAlumnos == true) {return true;} 
+		else {return false;}				
+	}
+	
+	public int getIdAula(){return idAula;}
+	public int getNumeroMaxDeEstudiates(){return numeroMaxDeEstudiates;}
+	public String getAsignaturaDelAula(){return asignaturaDelAula;}
+
+	@Override
+	public String toString() {
+		return "Aula [idAula=" + idAula + ", numeroMaxDeEstudiates=" + numeroMaxDeEstudiates + ", asignaturaDelAula="
+				+ asignaturaDelAula + "]";
+	}	
+}

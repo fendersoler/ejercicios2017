@@ -1,0 +1,24 @@
+package cine;
+
+public class Cine {
+		
+	private String pelicula;
+	private int precio;
+	
+	public Cine(int precio){
+		this.pelicula =  peliculaDelCine();
+		this.precio = precio;
+	}
+	
+	public String peliculaDelCine(){
+		Pelicula peli = new Pelicula(peli.getTitulo(), peli.getDuracion(),peli.getEdadMinima(),
+				peli.getDirector());
+		return peli.getTitulo();
+	}
+
+	public String getPelicula(){return pelicula;}
+	public int getPrecio(){return precio;}
+
+	@Override
+	public String toString(){return "Cine [pelicula=" + pelicula + ", precio=" + precio + "]";}	
+}
