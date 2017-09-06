@@ -19,7 +19,7 @@ public class Punto {
 
 		String option;
 
-		System.out.println("=========MENU PUNTOS=========");
+		System.out.println("\n"+"=========MENU PUNTOS=========");
 		System.out.println("C: Crear un punto");
 		System.out.println("B: Buscar un punto");
 		System.out.println("D: Borrar un punto");
@@ -61,8 +61,6 @@ public class Punto {
 
 		System.out.println("Introduce la segunda coordenada");
 		int segundaCoordBusqueda = teclado.nextInt();
-		
-		teclado.close();
 
 		Punto puntoBuscado = new Punto(primeraCoordBusqueda, segundaCoordBusqueda);
 
@@ -81,19 +79,25 @@ public class Punto {
 	}
 
 	static boolean borrarPunto(Punto[] losPuntos, int counter) {
-		boolean sePuedeBorrar;
+		boolean sePuedeBorrar;	
+		counter--;
 		
-		if ((counter-1)>0 && losPuntos[counter-1] != null) {
-			losPuntos[counter-1]=null;
-			counter--;				
-			System.out.println("El punto ha sido borrado. Nuevo contado: "+ counter);
+		if ((counter)>0 && losPuntos[counter] != null) {			
+			losPuntos[counter]=null;
+			System.out.println("El punto ha sido borrado. Nuevo contador: "+ counter);
+			Punto.setCounter(Punto.counter-1);
 			sePuedeBorrar = true;
-		}
-		else {
+		}else if((counter)==0){
+			if (losPuntos[counter] != null){
+				losPuntos[counter]=null;
+				Punto.setCounter(Punto.counter-1);
+				System.out.println("El array está vacio");				
+			}
+			sePuedeBorrar= true;
+		}else {
 			System.out.println("No hay puntos para borrar");
 			sePuedeBorrar= false;
-		}
-		
+		}		
 		return sePuedeBorrar;
 	}
 
@@ -112,6 +116,9 @@ public class Punto {
 		}
 	}
 	
+	public static int getCounter(){return counter;}
+	public static void setCounter(int counter){Punto.counter = counter;}
+
 	@Override
 	public String toString() {return "("+x + ","+ y+")" ;}		
 }
