@@ -5,8 +5,6 @@ public class PruebaPunto {
 	public static void main(String[] args) {		
 		
 		Punto [] losPuntos = new Punto [10];
-		losPuntos [0] = new Punto (1,5);
-		losPuntos [1] = new Punto (2,6);
 		
 		String option;
 		do {
@@ -14,8 +12,7 @@ public class PruebaPunto {
 			
 			System.out.println("tu opcion es " + option.toUpperCase());
 
-			switch (option.toUpperCase()) {
-			
+			switch (option.toUpperCase()) {			
 			case "C":
 				Punto.crearPunto(losPuntos, Punto.counter);
 				System.out.println("El contador ahora es " + Punto.counter);
