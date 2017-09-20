@@ -24,10 +24,21 @@
 <fullyQualifiedTypeName name="cine.Pelicula"/>
 <fullyQualifiedTypeName name="java.lang.Thread"/>
 <fullyQualifiedTypeName name="java.lang.ThreadLocal"/>
-<fullyQualifiedTypeName name="java.util.concurrent.ThreadLocalRandom"/>
 <fullyQualifiedTypeName name="javax.swing.text.StyledEditorKit.ForegroundAction"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="cine.Espectador"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="ejercicio54.Punto"/>
+<fullyQualifiedTypeName name="ejercicio61.Persona"/>
+<fullyQualifiedTypeName name="ejercicio61.Empleado"/>
+<fullyQualifiedTypeName name="ejercicio62.Corredor"/>
+<fullyQualifiedTypeName name="ejercicio63.Obrero"/>
+<fullyQualifiedTypeName name="ejercicio63.Tecnico"/>
+<fullyQualifiedTypeName name="ejercicio65.Punto"/>
+<fullyQualifiedTypeName name="ejercicio64.Empleado"/>
+<fullyQualifiedTypeName name="java.util.concurrent.ThreadLocalRandom"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="ejercicio64.Obrero"/>
+<fullyQualifiedTypeName name="ejercicio64.Tecnico"/>
+<fullyQualifiedTypeName name="java.lang.ArrayStoreException"/>
 </qualifiedTypeNameHistroy>

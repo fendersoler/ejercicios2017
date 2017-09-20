@@ -62,8 +62,14 @@ public class Alumno extends Persona {
 
 	@Override
 	public String toString() {
+		
+		String notasEscritas="";
+		
+		for (int i = 0; i <= 2; i++) {
+			notasEscritas = notasEscritas + Arrays.toString(asignaturasYNotas[i]);			
+		}		
+		
 		return "Alumno [nombre=" + nombre + ", edad=" + edad+ ", sexo=" + sexo + 
-				", estaDisponible= " + estaDisponible + ", notas" +Arrays.toString(asignaturasYNotas[0])+
-				Arrays.toString(asignaturasYNotas[1])+Arrays.toString(asignaturasYNotas[2]) + " ]";
+				", estaDisponible= " + estaDisponible + ", notas" + notasEscritas + " ]";
 	}
 }

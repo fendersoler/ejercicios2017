@@ -34,7 +34,10 @@ public class Profesor extends Persona {
 
 	@Override
 	public String toString() {
+		
+		int a=9;
+		
 		return "Profesor [materia=" + materia + ", nombre=" + nombre + ", edad=" + edad	+ ", sexo=" + sexo + 
-				", estaDisponible=" + estaDisponible + "]";
+				", estaDisponible=" + estaDisponible + a+"]";
 	}
 }

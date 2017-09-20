@@ -1,6 +1,0 @@
-package cine;
-
-public class Espectador {
-	//nos interesa saber su nombre, edad y el dinero que tiene.
-
-}

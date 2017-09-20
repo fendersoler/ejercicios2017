@@ -1,6 +1,0 @@
-package cine;
-
-public class Cine {
-	//conocer la película que se está reproduciendo y el precio de la entrada en el cine.
-
-}

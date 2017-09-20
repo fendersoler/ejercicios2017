@@ -37,15 +37,16 @@ public class Sala {
 		
 		int [] filas = {8,7,6,5,4,3,2,1};
 		String[] columnas = {"A","B","C","D","E","F","G","H","I"};			
-		String butacas[][]= new String[8][9];		
+		String butacas[][]= new String[8][9];
+		//String salaDelCine="";
 		
 		for (int i = 0; i < 8; i++) {
 			for (int j = 0; j < 9; j++) {
-				butacas[i][j]=filas[i] + columnas [j] +": "+ sala[i][j];				
+				butacas[i][j]=filas[i] + columnas [j] +": "+ sala[i][j];	
 			}			
 		}
 		
-		return "Sala "+ "\n"+Arrays.toString(butacas[0])+ "\n"+ Arrays.toString(butacas[1])+ "\n" +
+		return "Sala "+ "\n"+ Arrays.toString(butacas[0])+ "\n"+ Arrays.toString(butacas[1])+ "\n" +
 					Arrays.toString(butacas[2])+ "\n"+ Arrays.toString(butacas[3])+ "\n" + 
 					Arrays.toString(butacas[4])+ "\n"+ Arrays.toString(butacas[5])+ "\n" +
 					Arrays.toString(butacas[6])+ "\n"+ Arrays.toString(butacas[7])+ "\n";			
