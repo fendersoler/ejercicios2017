@@ -1,0 +1,8 @@
+package ejercicio64_empresa;
+
+public class Empresa {
+	
+	public static void main(String[] args) {
+		
+	}
+}
