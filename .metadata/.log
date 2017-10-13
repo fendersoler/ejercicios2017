@@ -5585,3 +5585,9 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY com.liferay.training.developer.snippets 1 0 2017-10-13 10:01:08.495
 !MESSAGE Snippet file imported: C:\Liferay\Eclipse\eclipse\configuration\org.eclipse.osgi\1019\0\.cp\snippets\13.3-search-and-indexing.xml
+
+!ENTRY org.apache.ivyde.eclipse 1 0 2017-10-13 10:03:54.607
+!MESSAGE starting IvyDE plugin
+
+!ENTRY org.apache.ivyde.eclipse 1 0 2017-10-13 10:03:54.636
+!MESSAGE IvyDE plugin started

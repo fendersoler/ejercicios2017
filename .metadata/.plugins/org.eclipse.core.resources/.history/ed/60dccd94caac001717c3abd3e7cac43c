@@ -1,0 +1,16 @@
+package ejercicio73;
+
+import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
+
+public class Numero {
+	
+	double numero;
+	
+	 public Numero(){
+		Random aleatorioInt = new Random();
+		double aleatorioDouble= ThreadLocalRandom.current().nextDouble();
+		this.numero =aleatorioDouble *aleatorioInt;
+	 }
+
+}

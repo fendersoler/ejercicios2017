@@ -1,0 +1,32 @@
+package ejercicio73;
+
+import java.text.DecimalFormat;
+import java.util.concurrent.ThreadLocalRandom;
+
+public class Numero {
+	
+	double numero;
+	
+	public Numero(){
+		int aleatorioInt = ThreadLocalRandom.current().nextInt();
+		System.out.println("Int aleatorio: " + aleatorioInt);
+		double aleatorioDouble= ThreadLocalRandom.current().nextDouble();
+		System.out.println("Double aleatorio: " + aleatorioDouble);
+		this.numero = Math.abs(aleatorioDouble * aleatorioInt);
+		System.out.println("Aleatorio absoluto: " + numero);
+	}
+	
+	public void raizCuadrada(){	
+		double raiz = Math.sqrt(numero); 
+		System.out.println("Raiz: " + raiz);
+		formato(raiz);
+	}
+	public void elevarPotencia(){	
+		double elevar=0;
+		formato(elevar);
+	}
+	public void formato(double numero){	
+		DecimalFormat formato = new DecimalFormat("#,###.00");
+		System.out.println("Valor con formato: " + formato.format(numero));
+	}
+}

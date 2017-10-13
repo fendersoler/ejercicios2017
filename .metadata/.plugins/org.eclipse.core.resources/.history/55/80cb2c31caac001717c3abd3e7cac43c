@@ -1,0 +1,9 @@
+package ejercicio73;
+
+public class Numero {
+	
+	double numero;
+	
+	 
+
+}
