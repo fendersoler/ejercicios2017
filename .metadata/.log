@@ -5591,3 +5591,6 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.apache.ivyde.eclipse 1 0 2017-10-13 10:03:54.636
 !MESSAGE IvyDE plugin started
+
+!ENTRY org.eclipse.ui.navigator.resources 4 0 2017-10-13 11:10:30.408
+!MESSAGE Could not acquire INavigatorContentService: Project Explorer not found.
