@@ -1,0 +1,19 @@
+package ejercicio82;
+
+public interface LimitesSistema {
+	
+	int XMAX = 300;
+	int XMIN = 0;
+	int YMAX = 300;
+	int YMIN = 0;
+	
+	public default int normalizar(int x, int y) {
+		if (x> XMAX) {
+			x=XMAX;
+		}
+		
+		return (x,y);
+	}
+	
+	public String pintar();
+}

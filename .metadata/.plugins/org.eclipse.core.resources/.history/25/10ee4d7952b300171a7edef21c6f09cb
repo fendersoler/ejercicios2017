@@ -1,0 +1,25 @@
+package ejercicio82;
+
+public interface LimitesSistema {
+	
+	int XMAX = 300;
+	int XMIN = 0;
+	int YMAX = 300;
+	int YMIN = 0;
+	
+	public default Punto normalizar(int x, int y) {
+		
+		if (x>XMAX) {x=XMAX;}
+		else if(x<XMIN){x=XMIN;}
+		
+		if (y>YMAX) {y=YMAX;}
+		else if(y<YMIN){y=YMIN;}
+		
+		System.out.println(x);
+		System.out.println(y);
+		
+		return Punto(x, y);
+	}
+	
+	public void pintar();
+}
