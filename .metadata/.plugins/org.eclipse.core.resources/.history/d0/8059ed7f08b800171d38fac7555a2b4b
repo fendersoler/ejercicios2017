@@ -1,0 +1,13 @@
+package ejercicio91;
+
+public class PersonalNumberException extends Exception {
+	
+	/*Ocho caracteres.
+	• Tres primeros tienen que ser letras en mayúsculas.
+	• Los cinco últimos tienen que ser dígitos.
+	• Ejemplos: ING23456, ALM00934, DEL12345*/
+	
+	
+	
+
+}

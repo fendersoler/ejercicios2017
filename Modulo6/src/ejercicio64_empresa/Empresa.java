@@ -14,9 +14,7 @@ public class Empresa {
 		Empleado [] empresa = new Empleado [indiceArrayEmpresa];
 		
 		crearEmpleados(empresa);
-		System.out.println("\n");
 		visualizarEmpleados(empresa);
-		System.out.println("\n");
 		subirSueldo(empresa);		
 	}
 	
@@ -25,7 +23,6 @@ public class Empresa {
 			int persona = ThreadLocalRandom.current().nextInt(1,5);				
 			if (persona == 3) {empresa [i]= new Tecnico();} 
 			else {empresa [i]= new Obrero();}
-			System.out.println(empresa [i]);
 		}
 	}
 	

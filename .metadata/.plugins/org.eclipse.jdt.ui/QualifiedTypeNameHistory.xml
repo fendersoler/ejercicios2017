@@ -3,7 +3,6 @@
 <fullyQualifiedTypeName name="persona.Persona"/>
 <fullyQualifiedTypeName name="java.util.Locale"/>
 <fullyQualifiedTypeName name="password.Password"/>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="electrodomestico.Lavadora"/>
 <fullyQualifiedTypeName name="electrodomestico.Television"/>
 <fullyQualifiedTypeName name="electrodomestico.Electrodomestico"/>
@@ -42,4 +41,7 @@
 <fullyQualifiedTypeName name="javax.swing.text.StyledEditorKit.ForegroundAction"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="ejercicio91.Tecnico"/>
+<fullyQualifiedTypeName name="ejercicio91.PersonalNumberException"/>
 </qualifiedTypeNameHistroy>

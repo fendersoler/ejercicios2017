@@ -1,0 +1,110 @@
+package ejercicio91;
+
+import java.util.Scanner;
+import java.util.concurrent.ThreadLocalRandom;
+
+public class PruebaExcepcion {
+
+	public static void main(String[] args) {
+		int indiceArrayEmpresa = ThreadLocalRandom.current().nextInt(1,10);		
+		Empleado [] empresa = new Empleado [indiceArrayEmpresa];
+		
+		crearEmpleados(empresa);		
+		visualizarEmpleados(empresa);
+	}
+	
+	//http://dis.um.es/~bmoros/Tutorial/parte9/cap9-2.html
+
+	public static void crearEmpleados(Empleado [] empresa){
+		for (int i = 0; i < empresa.length; i++) {
+			int persona = ThreadLocalRandom.current().nextInt(1,5);				
+			if (persona == 3) {
+				Tecnico tecnico = new Tecnico();				
+				Scanner sc = new Scanner(System.in);
+				
+				System.out.println("Introduce tu nombre: ");
+				String nombre = sc.nextLine();
+				tecnico.setNombre(nombre);
+				
+				System.out.println("Introduce tu edad: ");
+				byte edad = sc.nextByte();
+				tecnico.setEdad(edad);
+				
+				System.out.println("Introduce tu sexo (H/M): ");
+				Scanner scn = new Scanner(System.in);
+				String sexo = scn.nextLine();
+				tecnico.setSexo(sexo.charAt(0));
+				
+				/*System.out.println("Introduce tu DNI: ");
+				String dni = sc.nextLine();
+				try {
+					tecnico.setDni(dni);
+				} catch (PersonalNumberException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}*/
+				
+				System.out.println("Introduce tu estado civil (casado/ soltero): ");
+				Scanner scnn = new Scanner(System.in);
+				String estado= scnn.nextLine();		
+				System.out.println(estado);
+				if (estado == "casado"){
+					boolean bCasado = true;
+					tecnico.setbCasado(bCasado);
+				}else {
+					boolean bCasado = false;
+					tecnico.setbCasado(bCasado);
+				}
+				
+				
+				System.out.println("Introduce tu id personal: ");
+				Scanner scnnr = new Scanner(System.in);
+				String idpersonal = scnnr.nextLine();
+				tecnico.setIdpersonal(idpersonal);
+				
+				System.out.println("Introduce tu sueldo: ");
+				float sueldo = sc.nextFloat();
+				tecnico.setSueldo(sueldo);
+				
+				empresa [i]= tecnico;		
+				
+			}else {
+				Obrero obrero = new Obrero();				
+				Scanner sc = new Scanner(System.in);
+				
+				System.out.println("Introduce tu nombre: ");
+				String nombre = sc.nextLine();
+				obrero.setNombre(nombre);
+				
+				System.out.println("Introduce tu edad: ");
+				byte edad = sc.nextByte();
+				obrero.setEdad(edad);
+				
+				System.out.println("Introduce tu sexo (H/M): ");
+				Scanner scn = new Scanner(System.in);
+				String sexo = scn.nextLine();
+				obrero.setSexo(sexo.charAt(0));
+				
+				//TODO: dni y estado civil
+				
+				System.out.println("Introduce tu id personal: ");
+				Scanner scnnr = new Scanner(System.in);
+				String idpersonal = scnnr.nextLine();
+				obrero.setIdpersonal(idpersonal);
+				
+				System.out.println("Introduce tu sueldo: ");
+				float sueldo = sc.nextFloat();
+				obrero.setSueldo(sueldo);
+				
+				empresa [i]= obrero;
+			}
+			System.out.println(empresa [i]);
+		}
+	}
+	
+	public static void visualizarEmpleados(Empleado [] empresa){
+		for (int i = 0; i < empresa.length; i++) {			
+			empresa[i].pintar();
+		}
+	}	
+}

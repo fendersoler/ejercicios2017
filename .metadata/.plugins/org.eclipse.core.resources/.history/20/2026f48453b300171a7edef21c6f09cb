@@ -1,8 +1,0 @@
-package ejercicio82;
-
-public interface LimitesSistema {
-	
-	public default void normalizar(int x, int y) {}
-	
-	public void pintar();
-}
