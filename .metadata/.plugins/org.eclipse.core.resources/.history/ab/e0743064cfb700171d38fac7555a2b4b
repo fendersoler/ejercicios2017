@@ -1,5 +1,0 @@
-package ejercicio91;
-
-public class PersonalNumberException extends Exception {
-
-}
