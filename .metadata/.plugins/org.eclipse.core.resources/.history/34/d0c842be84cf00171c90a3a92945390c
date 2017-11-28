@@ -1,0 +1,30 @@
+package ejercicio112;
+
+import java.util.Iterator;
+import java.util.Random;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class NumerosAleatorios {
+
+	public static void main(String[] args) {
+		Set <Integer> numeros = new TreeSet();
+		int aleatorio = new Random().nextInt(99)+1;
+		
+		int cantidadDeNumeros = new Random().nextInt(99)+1;
+		System.out.println("Cantidad e números a generar: " + cantidadDeNumeros);
+		int contadorDeNumersoGenerados = 0; 
+		
+		for (int i = 0; i < cantidadDeNumeros; i++) {
+			contadorDeNumersoGenerados++;			
+			numeros.add(aleatorio);
+			System.out.println(numeros);
+		}
+		
+		for (Integer serieDeNumerosAleatorios : numeros) {
+			System.out.println(serieDeNumerosAleatorios);
+		}
+		
+		System.out.println("Números generados en total: " + contadorDeNumersoGenerados);
+	}
+}

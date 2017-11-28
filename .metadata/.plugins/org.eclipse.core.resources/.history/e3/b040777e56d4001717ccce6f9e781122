@@ -1,0 +1,50 @@
+package ejercicio114;
+
+public class Persona implements Comparable<Persona> {
+	
+	private String nombre;
+	private byte edad;
+	private char sexo;
+	private String dni;
+	private boolean bCasado;
+	
+	public Persona(String nombre, byte edad, char sexo, String dni, boolean bCasado){		
+		this.nombre = nombre;
+		this.edad = edad;
+		this.sexo = sexo;
+		this.dni =  dni;
+		this.bCasado = bCasado;		
+	}
+
+	public String getNombre() {return nombre;}
+	public byte getEdad(){return edad;}
+	public char getSexo(){return sexo;}
+	public String getDni(){return dni;}
+	public boolean isbCasado(){return bCasado;}
+
+	public void setNombre(String nombre){this.nombre = nombre;}
+	public void setEdad(byte edad){this.edad = edad;}
+	public void setSexo(char sexo){this.sexo = sexo;}
+	public void setDni(String dni){this.dni = dni;}
+	public void setbCasado(boolean bCasado){this.bCasado = bCasado;}	
+	
+	@Override
+	public String toString() {
+		return "Persona [nombre=" + nombre + ", edad=" + edad + ", sexo=" + sexo + ", "
+				+ "dni=" + dni + ", bCasado="+ bCasado + "]";
+	}
+
+	@Override
+	public int compareTo(Persona persona) {	
+		
+		Integer edad = new Integer(this.edad);
+		Integer personaEdad = new Integer(persona.edad);
+		
+		if(this.nombre.compareTo(persona.nombre) == 0){
+			if(this.edad > persona.edad){ return 1;}
+			else if(this.edad < persona.edad){ return -1;}
+			else {return 0;}
+		}
+		return edad.compareTo(personaEdad);
+	}
+}

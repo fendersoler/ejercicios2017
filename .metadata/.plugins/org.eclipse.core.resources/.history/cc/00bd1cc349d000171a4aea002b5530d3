@@ -1,0 +1,40 @@
+package ejercicio113;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ThreadLocalRandom;
+
+public class NIF {
+	
+	public static void main(String[] args) {		
+		
+		//Creo un HashMap a partir del array de letras
+		char letras[]={'T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q',
+				'V','H','L','C','K','E'};
+		Map<Integer, String> todasLasLetrasNif = new HashMap<Integer, String>();		
+		for (int i = 0; i < letras.length; i++) {
+			todasLasLetrasNif.put(i, String.valueOf(letras[i]));
+		}
+		
+		//Busco una letra del array al azar
+		int numeroLetraNif = ThreadLocalRandom.current().nextInt(1000, 99999999);
+		int resto = numeroLetraNif%23;
+		String letraDelNifEncontrada = todasLasLetrasNif.get(resto);
+		System.out.println(letraDelNifEncontrada);
+			
+		//Creo un NIF y lo añado en un ArrayList
+		List<String> nif = new ArrayList<>();
+		String dni = "";
+		for (int i = 0; i < 8; i++) {
+			Integer numeroDni = ThreadLocalRandom.current().nextInt(0, 9);
+			dni=dni + numeroDni.toString();
+		}	
+		System.out.println(dni);
+		
+		nif.add(dni+letraDelNifEncontrada);
+		
+		System.out.println(nif);
+	}		
+}

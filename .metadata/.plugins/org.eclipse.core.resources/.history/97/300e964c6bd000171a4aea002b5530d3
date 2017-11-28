@@ -1,0 +1,24 @@
+package ejercicio114;
+
+public class Persona implements Comparable<Persona> {
+	
+	private String nombre;
+	private byte edad;
+	private char sexo;
+	private String dni;
+	private boolean bCasado;
+	
+	public Persona(String nombre, byte edad, char sexo, String dni, boolean bCasado){		
+		this.nombre = nombre;
+		this.edad = edad;
+		this.sexo = sexo;
+		this.dni =  dni;
+		this.bCasado = bCasado;		
+	}
+
+	@Override
+	public int compareTo(Persona o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+}

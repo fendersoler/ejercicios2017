@@ -1,0 +1,63 @@
+package ejercicio114;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
+
+public class PruebaPersona {
+
+	public static void main(String[] args) {
+
+		List<String> personas = new ArrayList<String>();	
+		
+		Integer indice = ThreadLocalRandom.current().nextInt(0, 9);	
+		System.out.println("Personas a generar: "+indice);
+		
+		for (int i = 0; i < indice; i++) {
+			Integer aleatorio = new Random().nextInt(1000000)+1;
+			if (aleatorio%3 == 0){
+				Integer random = ThreadLocalRandom.current().nextInt(0, 9);	
+				String nombres[] = {"Pepe","Maria","Paco","Juan","Carlos","Rosa","Ana","Julia","Javier","Eva"} ;
+				String nombre = nombres[random];
+				System.out.println("Con nombre");
+				personas.add(obtenerPersonaAleatoria(nombre).toString());			
+			}
+			else{personas.add(obtenerPersonaAleatoria().toString());
+			System.out.println("Sin nombre");}
+		}
+		
+		System.out.println(personas);
+		
+	}
+	
+	static Persona obtenerPersonaAleatoria(){						
+		Integer aleatorio = ThreadLocalRandom.current().nextInt(0, 9);	
+		String nombres[] = {"Pepe","Maria","Paco","Juan","Carlos","Rosa","Ana","Julia","Javier","Eva"} ;
+		String nombre = nombres[aleatorio];
+		Persona persona = generadorDeDatos(nombre,aleatorio);		
+		return persona;}
+	
+	static Persona obtenerPersonaAleatoria(String nombre){
+		Integer aleatorio = ThreadLocalRandom.current().nextInt(0, 9);	
+		Persona persona = generadorDeDatos(nombre,aleatorio);		
+		return persona;}
+	
+	static Persona generadorDeDatos(String nombre,Integer aleatorio){		
+		
+		byte edades [] = {65,60,55,50,45,40,35,30,25,20};
+		String dnis [] = {"99557722","11223344","98765432","12345678","65324872","95957272",
+				"14233241","92675342","12785625","12369867"};	
+		
+		byte edad = edades[aleatorio];
+		char sexo = '\u0000';
+		if(aleatorio%2==0){sexo = 'M';}
+		else{sexo = 'H';}
+		String dni = dnis[aleatorio];
+		boolean bCasado = false;
+		if(aleatorio%2==0){bCasado = true;}
+		
+		return new Persona(nombre, edad, sexo, dni, bCasado);		
+	}
+
+}

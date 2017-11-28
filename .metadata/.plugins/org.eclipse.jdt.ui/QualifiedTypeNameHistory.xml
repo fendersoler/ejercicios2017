@@ -8,7 +8,6 @@
 <fullyQualifiedTypeName name="electrodomestico.Electrodomestico"/>
 <fullyQualifiedTypeName name="serie.Serie"/>
 <fullyQualifiedTypeName name="serie.Videojuego"/>
-<fullyQualifiedTypeName name="java.lang.Comparable"/>
 <fullyQualifiedTypeName name="libro.Libro"/>
 <fullyQualifiedTypeName name="java.util.regex.Matcher"/>
 <fullyQualifiedTypeName name="java.lang.Math"/>
@@ -21,7 +20,6 @@
 <fullyQualifiedTypeName name="cine.Cine"/>
 <fullyQualifiedTypeName name="cine.Pelicula"/>
 <fullyQualifiedTypeName name="java.lang.Thread"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="cine.Espectador"/>
 <fullyQualifiedTypeName name="ejercicio54.Punto"/>
 <fullyQualifiedTypeName name="ejercicio61.Persona"/>
@@ -31,15 +29,12 @@
 <fullyQualifiedTypeName name="ejercicio63.Tecnico"/>
 <fullyQualifiedTypeName name="ejercicio65.Punto"/>
 <fullyQualifiedTypeName name="ejercicio64.Empleado"/>
-<fullyQualifiedTypeName name="java.util.concurrent.ThreadLocalRandom"/>
 <fullyQualifiedTypeName name="ejercicio64.Obrero"/>
 <fullyQualifiedTypeName name="ejercicio64.Tecnico"/>
 <fullyQualifiedTypeName name="java.lang.ArrayStoreException"/>
 <fullyQualifiedTypeName name="java.lang.ThreadLocal"/>
 <fullyQualifiedTypeName name="java.text.DecimalFormat"/>
-<fullyQualifiedTypeName name="javax.swing.text.StyledEditorKit.ForegroundAction"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="ejercicio91.Tecnico"/>
 <fullyQualifiedTypeName name="ejercicio91.PersonalNumberException"/>
@@ -50,5 +45,19 @@
 <fullyQualifiedTypeName name="java.io.BufferedReader"/>
 <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
 <fullyQualifiedTypeName name="java.io.FileReader"/>
+<fullyQualifiedTypeName name="javax.swing.text.StyledEditorKit.ForegroundAction"/>
+<fullyQualifiedTypeName name="java.util.concurrent.ThreadLocalRandom"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
+<fullyQualifiedTypeName name="java.util.TreeSet"/>
+<fullyQualifiedTypeName name="java.lang.Comparable"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.util.PriorityQueue"/>
+<fullyQualifiedTypeName name="ejercicio114.Persona"/>
+<fullyQualifiedTypeName name="java.util.Collections"/>
+<fullyQualifiedTypeName name="java.util.Queue"/>
 </qualifiedTypeNameHistroy>

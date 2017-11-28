@@ -1,0 +1,34 @@
+package ejercicio114;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class PruebaPersona {
+
+	public static void main(String[] args) {
+
+		List<String> personas = new ArrayList<String>();
+		
+		
+
+	}
+	
+	static Persona obtenerPersonaAleatoria(){
+		
+		String nombre[] = {"Pepe","Maria","Paco","Juan","Carlos","Rosa","Ana","Julia","Javier","Eva"} ;
+		byte edad [] = {65,60,55,50,45,40,35,30,25,20};
+		
+		Persona persona = new Persona(nombre, edad, sexo, dni, bCasado);
+		
+		
+		
+		return persona;}
+	
+	static Persona obtenerPersonaAleatoria(String nombre){
+		
+		Persona persona = new Persona(nombre, edad, sexo, dni, bCasado);
+		
+		
+		return persona;}
+
+}

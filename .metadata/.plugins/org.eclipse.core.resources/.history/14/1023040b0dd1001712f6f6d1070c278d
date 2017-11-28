@@ -1,0 +1,38 @@
+package ejercicio114;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
+
+public class PruebaPersona {
+
+	public static void main(String[] args) {
+
+		List<String> personas = new ArrayList<String>();
+		
+		
+
+	}
+	
+	static Persona obtenerPersonaAleatoria(){
+		
+		String nombres[] = {"Pepe","Maria","Paco","Juan","Carlos","Rosa","Ana","Julia","Javier","Eva"} ;
+		byte edades [] = {65,60,55,50,45,40,35,30,25,20};
+		String dnis [] = {"99557722","11223344","98765432","12345678","65324872","95957272",
+				"14233241","92675342","12785625","12369867"};
+				
+		Integer aleatorio = ThreadLocalRandom.current().nextInt(0, 9);
+		String nombre = nombres[aleatorio];
+		byte edad = edades[aleatorio];
+		
+		Persona persona = new Persona(nombre, edad, sexo, dni, bCasado);		
+		return persona;}
+	
+	static Persona obtenerPersonaAleatoria(String nombre){
+		
+		Persona persona = new Persona(nombre, edad, sexo, dni, bCasado);
+		
+		
+		return persona;}
+
+}

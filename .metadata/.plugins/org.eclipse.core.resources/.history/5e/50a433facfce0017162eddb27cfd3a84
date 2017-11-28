@@ -1,0 +1,22 @@
+package ejercicio111;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+public class ProgramaPersonas {
+
+	public static void main(String[] args) {
+		
+		List<Empleado> = new ArrayList();
+		
+		int aleatorio = new Random().nextInt(5)+1;
+		
+		if (aleatorio == 1) {Empleado();
+			
+		}
+
+
+
+	}
+}

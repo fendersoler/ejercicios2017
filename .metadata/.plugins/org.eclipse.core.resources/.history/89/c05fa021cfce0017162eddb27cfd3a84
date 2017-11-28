@@ -1,0 +1,16 @@
+package ejercicio111;
+
+import java.util.Random;
+
+public class ProgramaPersonas {
+
+	public static void main(String[] args) {
+		
+		Random aleatorio = new Random;
+		
+		
+
+
+
+	}
+}

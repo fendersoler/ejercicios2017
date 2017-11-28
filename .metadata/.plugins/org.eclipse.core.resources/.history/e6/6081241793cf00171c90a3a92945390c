@@ -1,0 +1,16 @@
+package ejercicio113;
+
+import java.util.concurrent.ThreadLocalRandom;
+
+public class NIF {
+	
+	public static void main(String[] args) {
+		
+		char letras[]={'T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q',
+				'V','H','L','C','K','E'};
+		
+		int randomNum = ThreadLocalRandom.current().nextInt(1000, 99999999);
+		
+		
+		}		
+}

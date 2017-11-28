@@ -1,0 +1,9 @@
+package ejercicio112;
+
+import java.util.Random;
+
+public class NumerosAleatorios {
+	
+	int aleatorio = new Random().nextInt(99)+1;
+
+}

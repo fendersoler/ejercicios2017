@@ -1,0 +1,57 @@
+package ejercicio113;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Random;
+import java.util.Set;
+import java.util.TreeSet;
+import java.util.concurrent.ThreadLocalRandom;
+
+public class NIF {
+	
+	public static void main(String[] args) {			
+					
+		//Creo X NIFs y los añado en un ArrayList
+		List<String> nif = new ArrayList<>();
+		
+		int numeroDeNifACrear = new Random().nextInt(20)+1;		
+		for (int i = 0; i < numeroDeNifACrear; i++) {
+			nif.add(crearNif()+letraNif());			
+		}		
+		
+		System.out.println(nif);
+		
+		//Ordeno los NIFs
+		Set<String> treeset= new TreeSet<>();
+		treeset.addAll(nif);
+		System.out.println("Array ordenado:");
+		System.out.println(treeset);
+	
+	}	
+	
+	public static String crearNif(){
+		String dni = "";
+		
+		for (int i = 0; i < 8; i++) {
+			Integer numeroDni = ThreadLocalRandom.current().nextInt(0, 9);
+			dni=dni + numeroDni.toString();
+		}
+		return dni;
+	}
+	
+	public static String letraNif(){
+		char letras[]={'T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q',
+				'V','H','L','C','K','E'};
+		Map<Integer, String> todasLasLetrasNif = new HashMap<Integer, String>();		
+		for (int i = 0; i < letras.length; i++) {
+			todasLasLetrasNif.put(i, String.valueOf(letras[i]));
+		}
+		int numeroLetraNif = ThreadLocalRandom.current().nextInt(1000, 99999999);
+		int resto = numeroLetraNif%23;
+		String letraDelNifEncontrada = todasLasLetrasNif.get(resto);
+		
+		return letraDelNifEncontrada;		
+	}
+}

@@ -1,0 +1,22 @@
+package ejercicio114;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class PruebaPersona {
+
+	public static void main(String[] args) {
+
+		List<String> personas = new ArrayList<String>();
+		
+		
+
+	}
+	
+	static Persona obtenerPersonaAleatoria(){
+		
+		Persona persona = new Persona(nombre, edad, sexo, dni, bCasado)
+		
+		return persona;}
+
+}

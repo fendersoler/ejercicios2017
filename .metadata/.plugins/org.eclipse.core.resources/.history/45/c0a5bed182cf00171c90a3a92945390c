@@ -1,0 +1,20 @@
+package ejercicio112;
+
+import java.util.Random;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class PruebaNumerosAleatorios {
+
+	public static void main(String[] args) {
+		Set <Integer> numeros = new TreeSet<Integer>();
+		int cantidadDeNumeros = new Random().nextInt(99)+1;
+		int contadorDeNumersoGenerados = 0; 
+		
+		for (int i = 0; i < cantidadDeNumeros; i++) {
+			contadorDeNumersoGenerados++;
+			
+			
+		}
+	}
+}
